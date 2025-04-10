@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LocalStorage Demo</title>
+</head>
+<body>
+  <h1>Guardar en LocalStorage</h1>
+  <input type="text" id="username" placeholder="Tu nombre">
+  <button onclick="saveData()">Guardar</button>
+  <button onclick="loadData()">Cargar</button>
+
+  <script>
+    function saveData() {
+      const username = document.getElementById('username').value;
+      localStorage.setItem('username', username);
+      alert('¡Dato guardado!');
+    }
+
+    function loadData() {
+      const username = localStorage.getItem('username');
+      alert(username || 'No hay datos guardados.');
+    }
+  </script>
+</body>
+</html>c
