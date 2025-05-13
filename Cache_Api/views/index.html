@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica con Cache API</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <h1>Práctica con Cache API </h1>
+    <p>Para notar la diferencia abre las herramientas de desarrollo y luego desconectate del internet. Por arte de magia</p>
+
+    <script src="/main.js"></script>
+    <script>
+        if('serviceworker' in navigator){
+            navigator.serviceWorker.register('serviceworker.js')
+                .then(() => console.log('TOdo se realizo correctamente'))
+                .catch(err => console.log('Error al registrar', err));
+        }
+    </script>
+
+</body>
+</html>
